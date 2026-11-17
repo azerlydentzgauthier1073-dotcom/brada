@@ -1,0 +1,289 @@
+
+/* BRADA - Main Design */
+
+:root {
+  --background: #101010;
+  --surface: #1b1b1b;
+  --gold: #d6ad55;
+  --white: #ffffff;
+  --muted: #aaaaaa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--white);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 7%;
+  border-bottom: 1px solid #292929;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(16,16,16,0.96);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  color: var(--gold);
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: #ddd;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+.language {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* HERO */
+
+.hero {
+  text-align: center;
+  padding: 110px 20px;
+  background:
+    radial-gradient(ellipse at center, #332714 0%, #101010 70%);
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 6vw, 65px);
+  max-width: 850px;
+  margin: auto;
+  line-height: 1.15;
+}
+
+.hero > p:not(.eyebrow) {
+  color: var(--muted);
+  max-width: 600px;
+  margin: 22px auto 30px;
+}
+
+.primary-btn {
+  display: inline-block;
+  background: var(--gold);
+  color: #101010;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.primary-btn:hover {
+  background: #f0cb79;
+  transform: translateY(-3px);
+}
+
+/* SECTIONS */
+
+.section {
+  padding: 75px 7%;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-heading h2,
+.about h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.section-heading > p:not(.eyebrow),
+.about > p:not(.eyebrow) {
+  color: var(--muted);
+}
+
+/* CATEGORIES */
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.category {
+  background: var(--surface);
+  border: 1px solid #303030;
+  border-radius: 12px;
+  padding: 30px 20px;
+  transition: 0.3s;
+}
+
+.category:hover {
+  border-color: var(--gold);
+  transform: translateY(-5px);
+}
+
+.category span {
+  font-size: 35px;
+}
+
+.category h3 {
+  margin: 15px 0 5px;
+  color: var(--gold);
+}
+
+.category p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* PRODUCTS */
+
+.products {
+  background: #151515;
+}
+
+.product-placeholder {
+  text-align: center;
+  padding: 50px 20px;
+  background: var(--surface);
+  border: 1px dashed #555;
+  border-radius: 12px;
+}
+
+.product-placeholder span {
+  font-size: 40px;
+  color: var(--gold);
+}
+
+.product-placeholder h3 {
+  margin: 15px 0;
+}
+
+.product-placeholder p {
+  color: var(--muted);
+}
+
+/* ABOUT */
+
+.about {
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+.about > p:not(.eyebrow) {
+  max-width: 650px;
+  margin: auto;
+}
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid #303030;
+  padding: 40px 7%;
+  text-align: center;
+}
+
+footer p {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .header {
+    padding: 15px 5%;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  nav {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+    overflow-x: auto;
+  }
+
+  nav a {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .hero {
+    padding: 80px 18px;
+  }
+
+  .section {
+    padding: 55px 5%;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .category {
+    padding: 22px 13px;
+  }
+
+  .section-heading h2,
+  .about h2 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 360px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+}
