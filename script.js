@@ -3,16 +3,16 @@
 // (pour les catégories, elle renvoie vers la section « Produits »).
 const LINKS = {
   // Catégories
-  "gaming": "",
-  "mode": "",
-  "business": "",
-  "maison": "",
+  "gaming": "https://store.steampowered.com/",
+  "mode": "https://www.shein.com/",
+  "business": "https://www.shopify.com/",
+  "maison": "https://www.temu.com/",
   // Services
-  "recharge-mobile": "",
-  "achats-en-ligne": "",
-  "recharge-visa": "",
-  "marketing-digital": "",
-  "services-crypto": ""
+  "recharge-mobile": "https://wa.me/50942426882?text=Bonjour%20BRADA.%20Je%20souhaite%20des%20informations%20sur%20%3A%20Recharge%20mobile.",
+  "achats-en-ligne": "https://www.amazon.com/",
+  "recharge-visa": "https://wa.me/50942426882?text=Bonjour%20BRADA.%20Je%20souhaite%20des%20informations%20sur%20%3A%20Recharge%20Visa.",
+  "marketing-digital": "https://wa.me/50942426882?text=Bonjour%20BRADA.%20Je%20souhaite%20des%20informations%20sur%20%3A%20Marketing%20digital.",
+  "services-crypto": "https://wa.me/50942426882?text=Bonjour%20BRADA.%20Je%20souhaite%20des%20informations%20sur%20%3A%20Services%20crypto."
 };
 
 document.querySelectorAll("[data-link]").forEach(card => {
